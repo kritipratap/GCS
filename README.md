@@ -1,5 +1,4 @@
-# GCS
-#ground control software
+# Ground Control Software
 
  This package provides a ground station control software for UAVs. It displays the OSM map with Leaflet in a browser, while connected to ROS. This displays the trajectory of GPS (/NavSatFix) using a marker and enables to add waypoints for navigation. The navigation of vehicle can be monitored using the video feed provided by the camera at the interface. An additional feed can be incorporated by selecting the appropriate topic from the list present on the interface
 
