@@ -1,0 +1,13 @@
+<launch>
+    <!-- <param name="/panel/gps_topic" value="/kitti/oxts/gps/fix" /> -->
+    <param name="/panel/gps_topic" value="/mavros/global_position/global" />
+    <!--<param name="/panel/pose_topic" value="/sslam/robot/pose" />-->
+    <param name="/panel/image_topic" value="csi_cam/image_raw/compressed" />
+    <param name="/panel/waypt_topic" value="mavros/mission/waypoints" />
+    <param name="/panel/wpreach_topic" value="mavros/mission/reached" />
+    <param name="/panel/nb_cycles" value="6" />
+    <param name="z_up" value="true" />
+    <include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch" >
+        <arg name="port" value="9090"/>
+    </include>
+</launch>
