@@ -11,7 +11,7 @@
 
 This is not actually a ROS package, so you do not need to put it in catkin workspace. It connects to ROS to get information from GPS sensor, and uses some ROS functionality, for instance ROS param, ROS topic, ROS service etc. 
 
-The flight controller used is pixhawk. To enable completely functionality of package create a catkin workspace with `px4 Firware`. To operate the software with simulation, use gazebo. The setup procedure is given in `SETUP.md`.
+The flight controller used is pixhawk. To enable completely functionality of package create a catkin workspace with [px4 Firware](https://github.com/PX4/Firmware). To operate the software with simulation, use gazebo. The setup procedure is given in `SETUP.md`.
 
 To allow this application to connect with ROS, you need to install RosBridge, which is kind of a bridge to connect some Javascript apps to the ROS core. To do so, please follow the [tutorial](http://wiki.ros.org/rosbridge_suite/Tutorials/RunningRosbridge).
 
