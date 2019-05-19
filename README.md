@@ -40,7 +40,7 @@ And then, open the page `index.html` with your browser, and you're ready. You ca
     ├── launch                  # Demo launch files
     ├── lib                     # All important js libraries, including leaflet, leaflet plugins, three 3D lib.
     ├── index.html              # Demo html page for displaying the map.
-    ├── script_img.js		        # Implemented js script for navigation.
+    ├── script_img.js	        # Implemented js script for navigation.
     ├── script_fix.js           # Demo js script to display `NavSatFix` message.
     ├── LICENSE
     ├──	SETUP.md
