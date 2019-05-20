@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Map panel</title>
+		<meta charset="UTF-8">
+		<!-- Leaflet -->
+		<link rel="stylesheet" href="lib/linearMeasurement/Leaflet.LinearMeasurement.scss" />
+		<link rel="stylesheet" href="lib/leaflet/leaflet.css" />
+		<script src="lib/leaflet/leaflet.js"></script>
+		
+		<!-- Easy Button -->
+		<link href="lib/easy-button/easy-button.css" rel="stylesheet">
+		<script src="lib/easy-button/easy-button.js"></script>
+
+		<!-- Roscore -->
+		<script type="text/javascript" src="lib/roslib/eventemitter2.min.js"></script>
+		<script type="text/javascript" src="lib/roslib/roslib.min.js"></script>
+
+		<!-- Bootstrap & JQuery -->
+		<link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<script src="lib/jquery/jquery-2.2.0.min.js"></script>
+
+		<!-- SweetAlert -->
+		<link href="lib/sweetalert/sweetalert.css" rel="stylesheet">
+		<script src="lib/sweetalert/sweetalert.min.js"></script>
+
+	</head>
+
+	<body>
+                <h2 style="text-align: center">Local Map of GPS</h2>
+
+
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <div class="row" style="text-indent: 10%">
+                                <h5 style="text-align: center">Select <b>IMAGE TOPIC</b> to display</h5>
+                                <form  id="form_list" action="" style="overflow: auto; white-space: nowrap">
+                                    <fieldset>
+                                        <select id="vid_list" size="38">
+
+                                        </select>
+                                        <br /><br />
+                                        <center><input type="button" onClick="return on_click()" value="Submit"></center>
+                                    </fieldset>
+                                </form>
+                            </div>
+                            <br /><br />
+                            <div class="row" style="text-indent: 10%">
+                                <h5 style="text-align: center"><b>Location Marker</b></h5>
+                                <p>Click on Location to Add Marker</p>
+                                <p>Clear Map :    <input type="button" onClick="return clrMarker()" value="Clear"></p>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="row" >
+                                <img src="" alt="" align="right" style="display:block; width:95%; height:90%" id="video1"> 
+                            </div><br /><br />
+                            <div class="row">
+                                <img src="" alt="" align="right" style="display:block; width:95%; height:90%" id="video2"> 
+                            </div>
+                        </div>
+                        <div class="col-sm-6" >
+                            <div class="row">
+                                <div id='map' style='height:750px; margin-left:7px '></div>
+                            </div><br />
+                            <div class="row">
+                                <div class="col-sm-offset-1 col-sm-1" >
+                                    <input type="button" onClick="return arm()" value="Arm">
+                                </div>
+                                
+                                <div class="col-sm-offset-2 col-sm-1" >
+                                    <input type="button" onClick="return take_off()" value="Take Off">
+                                </div>
+
+                                <div class="col-sm-offset-2 col-sm-1" >
+                                    <input type="button" onClick="return land()" value="Land">
+                                </div>
+
+ 				<div class="col-sm-offset-2 col-sm-1" >
+                                    <input type="button" onClick="return disarm()" value="Disarm">
+                                </div>
+                            </div>
+                            <br /><br />
+                            <div>
+                               <div class="row"> 
+                                   <div class="col-sm-offset-1 col-sm-7">
+                                        <div class="slidercont">
+                                            <p style="text-align: center"> Set<b> YAW </b>value using the slider to hover</p>
+                                            <input type="range" min="-90" max="90" value="0" class="slider" id="myRange">
+                                            <p style="text-align: center"> Value: <span id="sp"></span> (deg) </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-offset-1 col-sm-2">
+                                        <input type="button" onClick="return pause()" value="Hover">
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+          
+            <!-- Scripts -->
+            <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+            <!-- Plugins -->
+            <script src="lib/linearMeasurement/Leaflet.LinearMeasurement.js"></script>
+            <script src="lib/leaflet_utm/UTM.js"></script>
+            <script src="lib/three.min.js"></script>
+
+            <!--<script src="scripts_opt.js"></script> -->
+            <!--<script src="scripts_pose.js"></script> -->
+            <script src="script_img.js"></script>
+            
+        </body>
+
+
+</html>
