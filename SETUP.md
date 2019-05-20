@@ -23,7 +23,7 @@ ctrl+c 	rosrun mavros mavros_node _fcu_url:='udp://:14540@127.0.0.1:14557'
 
 
 
-#### LAUNCH FILE *
+#### PX4 Launch *
 
 This instruction has to be executed everytime 'px4.lunch' is to be launched.
 
@@ -69,10 +69,10 @@ launch world files on gazebo
 - `export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:$(pwd)`
 - `export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:$(pwd)/Tools/sitl_gazebo`
 
-#### launch file
+#### Launch file
 - `roslaunch px4 posix_sitl.launch`
 
-#### launch another world
+#### Launch another world
 
 - `source Tools/setup_gazebo.bash $(pwd) $(pwd)/build/px4_sitl_default`
 - `roslaunch gazebo_ros empty_world.launch world_name:=$(pwd)/Tools/sitl_gazebo/worlds/iris.world`
@@ -81,7 +81,7 @@ launch world files on gazebo
 
 
 
-## LAUNCH GAZEBO ALONG WITH MAVROS 
+## GAZEBO WITH MAVROS 
 
 if used, then only this step is required
 above are used only to launch separately
@@ -97,7 +97,7 @@ to change follow above steps
 - `export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:$(pwd)/Tools/sitl_gazebo`
 
 
-#### launch file
+#### Launch file
 
 - `roslaunch px4 mavros_posix_sitl.launch`
 
