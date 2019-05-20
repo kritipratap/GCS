@@ -7,19 +7,17 @@ roslaunch px4.launch steps
 - `roscore`
 
  These instruction are for running the launch file for the first time.
-
+1. FCU URL setup
 - `source /opt/ros/kinetic/setup.bash`
 - `ls /opt/ros/kinetic/lib/mavros`
 - `rosrun mavros mavros_node _fcu_url:='udp://:14540@127.0.0.1:14557'`
 		
-
+2. GCS URL setup
 - `source /opt/ros/kinetic/setup.bash`
 - `ls /opt/ros/kinetic/lib/mavros`
 - `rosrun mavros gcs_bridge  _gcs_url:='udp://@127.0.0.1'`
 
-ctrl+c 	rosrun mavros mavros_node _fcu_url:='udp://:14540@127.0.0.1:14557'
-
-
+(exit)
 
 
 
